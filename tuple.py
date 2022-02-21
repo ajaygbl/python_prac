@@ -110,3 +110,63 @@ my_tuple = (4, 2, 3, [6, 5])
 # However, List is mutable it's element can be changed
 my_tuple[3][0] = 9
 print(my_tuple)
+
+print('\n')
+print('#####All & Any#####')
+print('\n')
+
+tuppy = (1,2,0,5,6,7,8,3)
+tuppy1=(1,2,3,4,5,6)
+print(all(tuppy))
+print(all(tuppy1))
+print(any(tuppy))
+
+print('\n')
+print('#####Ascending & Descending#####')
+print('\n')
+
+#Ascending
+tuppy = tuple(sorted(tuppy))
+print(tuppy)
+
+print('\n')
+
+#Descending
+tuppy1=tuple(sorted(tuppy1,reverse=True))
+print(tuppy1)
+
+print('\n')
+print('#####Conversion#####')
+print('\n')
+print('#####Tuple to List#####')
+
+#Tuple to list
+tup_1=(1,2,3,4)
+list1=list(tup_1)
+print(list1)
+print(type(list1))
+
+print('\n')
+print('#####List to Tuple#####')
+print('\n')
+
+list_1=[10,20,30,40]
+tup_2=tuple(list_1)
+print(tup_2)
+print(type(tup_2))
+
+print('\n')
+print('#####String to Tuple#####')
+print('\n')
+
+str1="python developer"
+tup_str=tuple(str1)
+print(tup_str)
+
+print('\n')
+print('#####Tuple to String#####')
+print('\n')
+
+str2="".join(tup_str)
+print(str2)
+
