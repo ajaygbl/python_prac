@@ -96,46 +96,11 @@ print(set_A.issubset(set_B)) # set_A <= set_B
 #intersection - it returns only common elements from both sets '&' is abbrevation for intersection
 print(set_A.intersection(set_B)) # set_A & set_B
 
-#intersection_update - it keeps elements in first set which are matched with second set   
-set_1={1,2,3,4,5}
-set_2={1,2,3,4,5,6,7}
-
-print(set_1)
-print(set_2)
-
-set_1.intersection_update(set_2)
-
-print('set_1 updated with elements matched :',set_1)
-
+#intersection_update - it updates first set with result of intersection b/w first set & both set
 
 #Difference - it returns all elements from first set which are not there in second set
-print(set_A.difference(set_B)) #set_A - set_B
+set_A.difference(set_B) #set_A - set_B
 
-#symmetric_difference - it returns un-matching elements from both sets
-print(set_A.symmetric_difference(set_B))
 
-#Difference_update - it keeps elements in first set which are not matched with second set
-set_A={'a','b','c','d'}
-set_B={'c','d','e','f'}
 
-print(set_A)
-print(set_B)
 
-set_A.difference_update(set_B)
-print('set_A updated with non matched elements :', set_A)
-
-#symmetric_difference_update - it will store un-matching elements from both sets into first set
-set_C={'a','b',1,2,'c'}
-set_D={'d','e','f',3,4,1,2}
-
-set_C.symmetric_difference_update(set_D)
-
-print(set_C)
-
-#using set in list
-list1=[10,20,30,{True,2,False,3},[40,2,{100,200,300}]]
-print(list1[3])
-#list1[3][0] #==> yhrows error since set don't support index
-
-print(list1[0:4])
-print(list1[0:list1[4][1]]) #list1[0:2]
