@@ -95,10 +95,10 @@ print('#Iterating over dict')
 emp={'id':1001,'name':'sai','age':10,'location':'delhi',100:1000}
 
 for i in emp:
-        print(i,":",emp[i])
-            
-                
-                    
+    print(i,":",emp[i])
+    
+    
+    
 print('#Nested dictionary')
 emps={1001:{'name':'abdul','age':25,'skill':'python'},1002:{'name':'anand','age':25,'skill':'linux'},1003:{'name':'jade','age':24,'skill':'java'}}
 print(emps[1001]['name'])
@@ -107,11 +107,28 @@ print(emps[1003]['name'])
 
 #iterating over dict object
 for empid,empinfo in emps.items():
-    print('empid: ',empid)
-    print('empinfo: ',empinfo)
+        print('empid: ',empid)
+        print('empinfo: ',empinfo)
     
 print('#Max, Min, Len of dict values')
 d1={'val1':10,'val2':20,'val3':30,'val4':40}
 print(max(d1.values()))
 print(min(d1.values()))
 print(len(d1.values()))
+
+print('\n')
+print('#creating mapping')
+states={'delhi':'DL','andhra pradesh':'AP','maharastra':'MH','karnataka':'KA','kerala':'KL'}
+cities={'DL':'agra','KL':'kochi','KA':'bangalore','AP':'vijayawada','MH':'mumbai'}
+
+print(cities[states['delhi']])
+
+
+for state,abbrev in states.items():
+    print("%s is abbreviated %s" %(state,abbrev))
+
+for city,abbrev in cities.items():
+    print("%s is abbreviated %s" %(city,abbrev))
+    
+for state,abbrev in states.items():
+    print("%s has city %s" %(state,cities[abbrev]))
